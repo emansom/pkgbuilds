@@ -1,0 +1,14 @@
+pkgbase = zsh-wakatime-git
+	pkgdesc = Track how much time you have spent in your terminal!
+	pkgver = 0.1.1.r7.gd3f24e9
+	pkgrel = 1
+	url = https://github.com/sobolevn/wakatime-zsh-plugin
+	arch = any
+	license = MIT
+	depends = zsh
+	conflicts = zsh-wakatime
+	source = zsh-wakatime::git+https://github.com/sobolevn/wakatime-zsh-plugin.git
+	sha512sums = SKIP
+	b2sums = SKIP
+
+pkgname = zsh-wakatime-git

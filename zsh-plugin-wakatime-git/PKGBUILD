@@ -1,0 +1,29 @@
+# Maintainer: Ewout van Mansom <ewout@vanmansom.name>
+
+pkgname=zsh-wakatime-git
+_pkgname=wakatime
+pkgver=0.1.1.r7.gd3f24e9
+pkgrel=1
+pkgdesc="Track how much time you have spent in your terminal!"
+arch=('any')
+url="https://github.com/sobolevn/wakatime-zsh-plugin"
+license=('MIT')
+depends=('zsh')
+conflicts=('zsh-wakatime')
+source=(
+  "zsh-wakatime::git+https://github.com/sobolevn/wakatime-zsh-plugin.git"
+)
+sha512sums=('SKIP')
+b2sums=('SKIP')
+
+pkgver() {
+  cd zsh-wakatime
+  git describe --long | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+package() {
+  cd zsh-wakatime
+  install -vDm 644 ${_pkgname}.plugin.zsh \
+    -t "${pkgdir}/usr/share/zsh/plugins/${_pkgname}/"
+}
+
