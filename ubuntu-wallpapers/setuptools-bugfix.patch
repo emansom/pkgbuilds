@@ -1,6 +1,6 @@
-diff --color --unified --recursive --text package.orig/ubuntu-wallpapers-22.04.4/setup.py package.new/ubuntu-wallpapers-22.04.4/setup.py
---- package.orig/ubuntu-wallpapers-22.04.4/setup.py	2022-06-28 16:59:20.711660124 +0200
-+++ package.new/ubuntu-wallpapers-22.04.4/setup.py	2022-06-28 17:02:04.586632861 +0200
+diff --color --unified --recursive --text package.orig/setup.py package.new/setup.py
+--- package.orig/setup.py	2022-07-01 12:03:01.556073789 +0200
++++ package.new/setup.py	2022-07-01 12:03:52.441063442 +0200
 @@ -15,6 +15,7 @@
  setup(
      name = 'ubuntu-wallpapers',

@@ -25,7 +25,7 @@ source=(
 )
 sha256sums=('83a9469e84c908d29f9fb2484029575a2d05548f9d984dca556740b622c5dd1e'
             '430a61aa87de2fc12ba3a7ba583df16643839c3b14c7d9138d67e43d43767a6b'
-            'd7e5504141f5ee761ad75e337e14df6d715fd58b33a75ce6295becc30932436b')
+            'd60d56d304b86215b04d4da53cebcb5fab998f245b50315b184defe4f852f09a')
 
 prepare() {
   cd "${pkgname}-${pkgver}"
@@ -34,7 +34,7 @@ prepare() {
   # Patch setuptools to work around new behavior in setuptools
   # Eventually this can be removed, whenever Ubuntu/Debian package maintainers
   # Stumble on this and fix it upstream.
-  patch --forward --strip=2 --input="${srcdir}/setuptools-bugfix.patch"
+  patch --forward --strip=1 --input="${srcdir}/setuptools-bugfix.patch"
 }
 
 package() {
